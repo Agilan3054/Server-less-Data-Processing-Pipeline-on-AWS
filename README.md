@@ -36,28 +36,23 @@ The system architecture includes the following components:
 - IAM roles with necessary permissions for AWS Lambda, AWS Glue, Amazon S3, Amazon Athena, and Amazon SNS
 
 ### Installation
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/yourusername/aws-data-processing-pipeline.git
-    cd aws-data-processing-pipeline
-    ```
 
-2. Deploy the AWS Lambda function:
+1. Deploy the AWS Lambda function:
     - Create a Lambda function in the AWS Management Console or using AWS CLI.
     - Upload the Lambda function code (`lambda_function.py`).
 
-3. Configure S3 bucket:
+2. Configure S3 bucket:
     - Create an S3 bucket to store raw and processed data.
     - Update the S3 bucket name in the Lambda function code and AWS Glue script.
 
-4. Set up AWS Glue:
+3. Set up AWS Glue:
     - Create a Glue crawler to catalog the data.
     - Create a Glue job for the ETL process, using the provided script (`glue_etl_script.py`).
 
-5. Configure Amazon Athena:
+4. Configure Amazon Athena:
     - Set up Athena to query the processed data stored in S3.
 
-6. Set up Amazon SNS:
+5. Set up Amazon SNS:
     - Create an SNS topic for real-time notifications.
     - Update the SNS topic ARN in the Lambda function code.
 
